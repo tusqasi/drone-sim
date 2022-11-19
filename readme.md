@@ -12,13 +12,13 @@ https://editor.p5js.org/tusqasi/full/IdEZbIjVG
 
 ## Folder structure
 
-sore-mirror/
+sore-mirror/   
 The drone simulation runs in the p5JS project here. 
 
-controller/
+controller/  
 The thing which will ouput thrust for the drone based on position info given by the sore-mirror
 
-server/
+server/  
 It will take messages from controller and sore-mirror and pass it on. It runs on websockets so latency is 🤌.
 
 ##  Running the project

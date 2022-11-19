@@ -5,6 +5,10 @@ Wanna fly a drone!! Don't have a bag a cash laying around your house? I got you.
 Introducing sore-mirror. A drone simulator playground. 
 
 
+### Check out the hosted version of the sore-mirror
+
+
+https://editor.p5js.org/tusqasi/full/IdEZbIjVG
 
 ## Folder structure
 

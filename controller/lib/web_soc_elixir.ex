@@ -3,7 +3,12 @@ defmodule EchoClient do
   require Logger
 
   def start_link(opts \\ []) do
-    WebSockex.start_link("ws://127.0.0.1:6969", __MODULE__, :fake_state, opts)
+    WebSockex.start_link(
+      "wss://InsubstantialRosyApplications.tusqasi.repl.co",
+      __MODULE__,
+      :fake_state,
+      opts
+    )
   end
 
   @spec echo(pid, String.t()) :: :ok
@@ -46,14 +51,14 @@ end
 
 defmodule Test do
   def main() do
-    thrust = 0.8
+    thrust = 0.4
     interval = 10
 
     EchoClient.start_link()
     |> case do
       {:ok, pid} ->
         1..5
-        |> Enum.each(fn stroke ->
+        |> Enum.each(fn _ ->
           1..50
           |> Enum.each(fn _ ->
             EchoClient.echo(pid, "{\"thrust\": #{thrust}}")
@@ -63,10 +68,10 @@ defmodule Test do
           Process.sleep(175)
         end)
 
-        thrust = 0.82
+        thrust = thrust + 0.1
 
         1..5
-        |> Enum.each(fn stroke ->
+        |> Enum.each(fn _ ->
           1..50
           |> Enum.each(fn _ ->
             EchoClient.echo(pid, "{\"thrust\": #{thrust}}")

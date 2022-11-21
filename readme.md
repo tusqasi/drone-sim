@@ -12,7 +12,7 @@ https://editor.p5js.org/tusqasi/full/IdEZbIjVG
 
 ## Folder structure
 
-sore-mirror/   
+sore-mirror/  
 The drone simulation runs in the p5JS project here. 
 
 controller/  
@@ -23,4 +23,4 @@ It will take messages from controller and sore-mirror and pass it on. It runs on
 
 ##  Running the project
 
-You will need elixir and node installed. Highly recommend [asdf-vm]() for managing multiple sdks
+You will need elixir and node installed. Highly recommend [asdf-vm](https://asdf-vm.com/) for managing multiple sdks

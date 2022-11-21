@@ -17,15 +17,8 @@ class Drone {
             this.velocity = 0;
         } else {
             // Above ground
-
             this.acceleration += GRAVITY;
             this.velocity += this.acceleration;
-            if (-this.velocity >= terminalVelocity) {
-                this.velocity = -terminalVelocity;
-            } else if (-this.velocity <= -terminalVelocity) {
-                this.velocity = terminalVelocity;
-            } else {
-            }
             this.position += this.velocity;
             fill(0);
             text("ACCELERATION :" + -this.acceleration.toFixed(2), 0, -300);
